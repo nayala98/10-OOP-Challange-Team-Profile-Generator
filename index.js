@@ -52,10 +52,9 @@ function questions() {
             name: "roleInfo"
         },
         {
-            type: "checkbox",
+            type: "confirm",
             message: "Would you like to add another team member?",
             name: "moreMembers",
-            choices: ["Yes", "No"]
             }])
             .then(function ({ roleInfo, moreMembers }) {
                 let newMember;
@@ -69,9 +68,8 @@ function questions() {
                     newMember = new Manager(name, id, email, roleInfo)
                     employees.push (newMember)
                 };
-                console.log(moreMembers)
-                console.log(roleInfo)
-                if (moreMembers === "Yes") {
+
+                if (moreMembers) {
                     questions () 
                 } else {
                     var fs = require('fs')
