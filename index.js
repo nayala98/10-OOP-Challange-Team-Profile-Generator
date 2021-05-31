@@ -1,6 +1,6 @@
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
+const ManagerExport = require("./lib/manager");
+const EngineerExport = require("./lib/engineer");
+const InternExport = require("./lib/intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -80,6 +80,7 @@ function appMenu() {
             idArray.push(answers.managerId);
             createTeam();
         })
+    }
         //Creates Team
         function createTeam() {
             inquirer.prompt([{
@@ -241,6 +242,5 @@ function appMenu() {
         fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
     }
     createManager();
-    }
 }
 appMenu();
