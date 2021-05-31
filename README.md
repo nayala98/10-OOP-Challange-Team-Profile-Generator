@@ -14,6 +14,8 @@ Navigate through the README Using the Table of Contents:
 A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person.
 
 ## Video
+The following is a Video link to a demo of the application.
+[Team Profile Generator](https://drive.google.com/file/d/1dhBoU_U0uSDDv7v7JhySPWfdEoXfB19Q/view)
 
 ## Installation
 Run npm install then you can run 'node index.js' or 'node index' to start the application.
